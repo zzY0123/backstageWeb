@@ -1,5 +1,5 @@
 # backstageWeb
-# omail
+# backstage
 
 ## Project setup
 ```
