@@ -13,7 +13,10 @@ class LoginFrom extends Component {
 		return (
 			<section className='login-content'>
 				<span className='content-title'>用户登录</span>
-				<Form className='login-from'>
+				<Form 
+					className='login-from'
+					onSubmit={this.handleSubmit}
+				>
 					<Form.Item
 						label="账号"
 						name="username"
@@ -22,7 +25,7 @@ class LoginFrom extends Component {
 					>
 						<Input
 							placeholder="账号"
-							prefix={<UserOutlined />}
+							prefix={<UserOutlined style={{color: 'rgba(0, 0, 0, .25)'}} />}
 						/>
 					</Form.Item>
 					<Form.Item
@@ -32,7 +35,7 @@ class LoginFrom extends Component {
 					>
 						<Input.Password 
 							placeholder="密码"
-							prefix={<LockOutlined />}
+							prefix={<LockOutlined style={{color: 'rgba(0, 0, 0, .25)'}} />}
 						/>
 					</Form.Item>
 					<Form.Item className='login-button-wrapper'>
@@ -46,6 +49,10 @@ class LoginFrom extends Component {
 				</Form>
 			</section>
 		)
+	}
+
+	handleSubmit = (event) => {
+
 	}
 }
 
