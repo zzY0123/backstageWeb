@@ -52,7 +52,10 @@ class LoginFrom extends Component {
 	}
 
 	handleSubmit = (event) => {
-
+		event.preventDefault()
+		const form = this.props.form
+		const values = form.getFieldsValue()
+		console.log(values)
 	}
 }
 
