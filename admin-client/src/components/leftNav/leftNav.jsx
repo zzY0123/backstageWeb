@@ -5,7 +5,7 @@ import './leftNav.css'
 class LeftNav extends Component {
 	render () {
 		return (
-			<div className='left-nav'>
+			<div className='left-nav-wrapper'>
 				LeftNav
 			</div>
 		)

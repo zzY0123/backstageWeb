@@ -3,12 +3,13 @@ import React, { Component } from 'react'
 
 import LeftNav from '../../components/leftNav/leftNav'
 import Header from '../../components/header/header'
-import Content from '../../components/content/content'
 import Footer from '../../components/footer/footer'
+
+import './admin.css'
 
 
 import { Layout } from 'antd';
-const {Sider} = Layout;
+const {Sider, Content} = Layout;
 
 class Admin extends Component {
 	render () {
@@ -18,13 +19,13 @@ class Admin extends Component {
 		// }
 
 		return (
-			<Layout style={{height: '100%'}}>
+			<Layout className='wrapper'>
       			<Sider>
 					<LeftNav />
 				</Sider>
       			<Layout>
 					<Header />
-					<Content />
+					<Content style={{backgroundColor: '#fff'}}>content</Content>
 					<Footer />
       			</Layout>
    			</Layout>
