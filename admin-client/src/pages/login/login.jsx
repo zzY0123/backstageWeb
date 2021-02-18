@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import LoginFrom from '../../components/loginForm/loginForm'
+
 import logo from '../../assets/image/login/logo.png'
 
 import './login.css'

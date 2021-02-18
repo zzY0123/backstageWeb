@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 // import {Redirect} from 'react-router-dom'
 
+import LeftNav from '../../components/leftNav/leftNav'
+import Header from '../../components/header/header'
+
 import { Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+const {Footer, Sider, Content } = Layout;
 
 class Admin extends Component {
 	render () {
@@ -13,7 +16,9 @@ class Admin extends Component {
 
 		return (
 			<Layout style={{height: '100%'}}>
-      			<Sider>Sider</Sider>
+      			<Sider>
+					<LeftNav />
+				</Sider>
       			<Layout>
       		  		<Header>Header</Header>
       		  		<Content>Content</Content>
