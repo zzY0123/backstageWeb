@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
+import './leftNav.css'
+
 class LeftNav extends Component {
 	render () {
 		return (
-			<div>
+			<div className='left-nav'>
 				LeftNav
 			</div>
 		)

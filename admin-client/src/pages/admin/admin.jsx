@@ -3,9 +3,12 @@ import React, { Component } from 'react'
 
 import LeftNav from '../../components/leftNav/leftNav'
 import Header from '../../components/header/header'
+import Content from '../../components/content/content'
+import Footer from '../../components/footer/footer'
+
 
 import { Layout } from 'antd';
-const {Footer, Sider, Content } = Layout;
+const {Sider} = Layout;
 
 class Admin extends Component {
 	render () {
@@ -20,9 +23,9 @@ class Admin extends Component {
 					<LeftNav />
 				</Sider>
       			<Layout>
-      		  		<Header>Header</Header>
-      		  		<Content>Content</Content>
-      		  		<Footer>Footer</Footer>
+					<Header />
+					<Content />
+					<Footer />
       			</Layout>
    			</Layout>
 		)
