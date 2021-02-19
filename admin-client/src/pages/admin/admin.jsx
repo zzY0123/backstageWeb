@@ -9,7 +9,7 @@ import './admin.css'
 
 
 import { Layout } from 'antd';
-const {Sider, Content} = Layout;
+const { Sider, Content } = Layout;
 
 class Admin extends Component {
 	render () {

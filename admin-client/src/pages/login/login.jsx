@@ -12,7 +12,7 @@ class Login extends Component {
 			<div className='login-wrapper'>
 				<header className='login-header'>
 					<img src={logo} alt="logo" className='header-logo' />
-					<span className='header-title'>富胜纸业后台管理系统</span>
+					<span className='header-title'>富胜纸业管理系统</span>
 				</header>
 				<LoginFrom />
 			</div>
