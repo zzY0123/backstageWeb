@@ -27,19 +27,50 @@ class LeftNav extends Component {
           			mode="inline"
           			theme="dark"
        			>	
-       			    <Menu.Item key="1" icon={<PieChartOutlined />}>
-       					首页
+       			    <Menu.Item key="/home" icon={<PieChartOutlined />}>
+						<Link to='/home'>
+       						首页	
+						</Link>
           			</Menu.Item>
           			<SubMenu key="sub1" icon={<MailOutlined />} title="商品">
-          				<Menu.Item key="2">品类管理</Menu.Item>
-            			<Menu.Item key="3">商品管理</Menu.Item>
+          				<Menu.Item key="/category">
+							<Link to='/category'>
+								品类管理
+							</Link>
+						</Menu.Item>
+            			<Menu.Item key="/product">
+							<Link to='/product'>
+								商品管理
+							</Link>
+						</Menu.Item>
           			</SubMenu>	
-					<Menu.Item key="4" icon={<DesktopOutlined />}>
-          				用户管理
+					<Menu.Item key="/user" icon={<DesktopOutlined />}>
+						<Link to='/user'>
+      	    				用户管理
+						</Link>
           			</Menu.Item>
-					<Menu.Item key="5" icon={<DesktopOutlined />}>
-          				角色管理
-          			</Menu.Item>
+					<Menu.Item key="/role" icon={<DesktopOutlined />}>
+						<Link to='/role'>
+      	    				角色管理
+						</Link>
+          			</Menu.Item>	
+					<SubMenu key="sub2" icon={<MailOutlined />} title="图形图表">
+          				<Menu.Item key="/bar">
+							<Link to='/charts/bar'>
+								柱状图
+							</Link>
+						</Menu.Item>
+            			<Menu.Item key="/line">
+							<Link to='/charts/line'>
+								折线图
+							</Link>
+						</Menu.Item>
+            			<Menu.Item key="/pie">
+							<Link to='/charts/pie'>
+								饼状图
+							</Link>
+						</Menu.Item>
+          			</SubMenu>
         		</Menu>
 			</div>
 		)

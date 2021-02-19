@@ -1,3 +1,6 @@
-.wrapper {
+.admin-wrapper {
   height: 100%;
+}
+.admin-wrapper .content {
+  background-color: #ffffff;
 }
