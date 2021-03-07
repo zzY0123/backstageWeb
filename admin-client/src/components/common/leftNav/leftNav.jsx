@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React, {Component} from 'react'
+import {Link, withRouter} from 'react-router-dom'
 
-import menuList from '../../config/menuConfig'
+import menuList from '../../../config/menuConfig'
 
-import logo from '../../assets/image/leftNav/logo.png'
+import logo from '../../../assets/image/leftNav/logo.png'
 
 import './leftNav.css' 
 
-import { Menu } from 'antd'
-const { SubMenu } = Menu;
+import {Menu} from 'antd'
+const {SubMenu} = Menu;
 
 class LeftNav extends Component {
 	componentWillMount () {

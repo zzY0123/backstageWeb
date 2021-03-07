@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 
-import LeftNav from '../../components/leftNav/leftNav'
-import Header from '../../components/header/header'
-import Footer from '../../components/footer/footer'
+import LeftNav from '../../components/common/leftNav/leftNav'
+import Header from '../../components/common/header/header'
+import Footer from '../../components/common/footer/footer'
 import Home from '../home/home'
 import Category from '../category/category'
 import Product from '../product/product'
 import User from '../user/user'
 import Role from '../role/role'
-import Bar from '../charts/bar'
-import Line from '../charts/line'
-import Pie from '../charts/pie'
+import Bar from '../charts/bar/bar'
+import Line from '../charts/line/line'
+import Pie from '../charts/pie/pie'
 
 import './admin.css'
 
-
-import { Layout } from 'antd';
-const { Sider, Content } = Layout;
+import {Layout} from 'antd';
+const {Sider, Content} = Layout;
 
 class Admin extends Component {
 	render () {

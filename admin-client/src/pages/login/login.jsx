@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-import LoginFrom from '../../components/loginForm/loginForm'
+import LoginFrom from '../../components/common/loginForm/loginForm'
 
 import logo from '../../assets/image/login/logo.png'
 

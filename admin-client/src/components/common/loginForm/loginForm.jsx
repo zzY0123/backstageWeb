@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 import {Form, Input, Button} from 'antd'
 import {

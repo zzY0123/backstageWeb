@@ -1,6 +1,6 @@
 import ajax from './ajax'
 import jsonp from 'jsonp'
-import { message } from 'antd'
+import {message} from 'antd'
 
 export const reqLogin = (username, password) => ajax('/login', {username, password}, 'POST')
 
