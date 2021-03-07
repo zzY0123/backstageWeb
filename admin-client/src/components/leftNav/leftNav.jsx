@@ -21,7 +21,7 @@ class LeftNav extends Component {
 
 		return (
 			<div className='left-nav-wrapper'>
-				<Link to='/' exact className='left-nav-header-wrapper'>
+				<Link to='/' className='left-nav-header-wrapper'>
 					<header className='left-nav-header'>
 						<img src={logo} alt='logo' />
 						<h1>富胜纸业管理系统</h1>
