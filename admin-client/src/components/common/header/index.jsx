@@ -6,7 +6,7 @@ import LinkButton from '../../common/link-button'
 import {formateDate} from '../../../utils/dateUtils'
 import {reqWeather} from '../../../api/index'
 
-import './header.css'
+import './style.css'
 
 import {Modal} from 'antd'
 import {ExclamationCircleOutlined} from '@ant-design/icons'

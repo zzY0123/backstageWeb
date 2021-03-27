@@ -6,7 +6,7 @@ import {
 	LockOutlined,
 } from '@ant-design/icons';
 
-import './loginFrom.css'
+import './style.css'
 
 class LoginFrom extends Component {
 	render () {

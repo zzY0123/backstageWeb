@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 
-import LeftNav from '../../components/common/leftNav/leftNav'
-import Header from '../../components/common/header/header'
-import Footer from '../../components/common/footer/footer'
+import LeftNav from '../../components/common/left-nav'
+import Header from '../../components/common/header'
+import Footer from '../../components/common/footer'
 import Home from '../home/home'
 import Category from '../category/category'
 import Product from '../product/product'
@@ -13,7 +13,7 @@ import Bar from '../charts/bar/bar'
 import Line from '../charts/line/line'
 import Pie from '../charts/pie/pie'
 
-import './admin.css'
+import './style.css'
 
 import {Layout} from 'antd';
 const {Sider, Content} = Layout;

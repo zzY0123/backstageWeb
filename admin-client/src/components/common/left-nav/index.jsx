@@ -5,7 +5,7 @@ import menuList from '../../../config/menuConfig'
 
 import logo from '../../../assets/image/leftNav/logo.png'
 
-import './leftNav.css' 
+import './style.css' 
 
 import {Menu} from 'antd'
 const {SubMenu} = Menu;

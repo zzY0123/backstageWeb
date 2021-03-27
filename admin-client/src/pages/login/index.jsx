@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 
-import LoginFrom from '../../components/common/loginForm/loginForm'
+import LoginFrom from '../../components/common/login-form'
 
 import logo from '../../assets/image/login/logo.png'
 
-import './login.css'
+import './style.css'
 
 class Login extends Component {
 	render () {
