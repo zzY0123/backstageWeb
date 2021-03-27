@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 
+import menuList from '../../../config/menuConfig'
+import LinkButton from '../../common/link-button'
 import {formateDate} from '../../../utils/dateUtils'
 import {reqWeather} from '../../../api/index'
 
 import './header.css'
 
+import {Modal} from 'antd'
+import {ExclamationCircleOutlined} from '@ant-design/icons'
+const {confirm} = Modal;
+		
 class Header extends Component {
 	state = {
 		currentTime: formateDate(Date.now()),
@@ -12,19 +19,21 @@ class Header extends Component {
 		weather: '',
 	}
 
-	render () {
+	
 
+	render () {
 		const {currentTime, weatherImageSrc, weather} = this.state
+		const title = this.getTitle()
 
 		return (
 			<div className='header-wrapper'>
 				<div className='header-top'>
 					<span>欢迎，admin</span>
-					<a href="javascript;">退出</a>
+					<LinkButton onClick={this.logout}>退出</LinkButton>
 				</div>
 				<div className='header-bottom'>
 					<div className="header-bottom-left">
-						首页
+						{title}
 					</div>
 					<div className="header-bottom-right">
 						<span>{currentTime}</span>
@@ -41,8 +50,12 @@ class Header extends Component {
 		this.getWeather()
 	}
 
+	componentWillUnmount() {
+		clearInterval(this.intervalId)
+	}
+
 	getRealTime = () => {
-		setInterval(() => {
+		this.intervalId = setInterval(() => {
 			const currentTime = formateDate(Date.now())
 			this.setState({currentTime})
 		}, 1000)
@@ -52,6 +65,32 @@ class Header extends Component {
 		const {weatherImageSrc, weather} = await reqWeather('深圳')
 		this.setState({weatherImageSrc, weather})
 	}
+
+	getTitle = () => {
+		const path = this.props.location.pathname
+		let title = ''
+		menuList.forEach(item => {
+			if (item.key === path) {
+				title = item.title
+			} else if (item.children) {
+				const cItem = item.children.find(cItem => cItem.key===path)
+				if (cItem) {
+					title = cItem.title
+				}
+			}
+		})
+		return title
+	}
+
+	logout = () => {
+		confirm({
+    		icon: <ExclamationCircleOutlined />,
+    		content: '确定退出吗？',
+    		onOk: ()  => {
+				this.props.history.replace('/login')
+			},
+		})
+	}
 }
 
-export default Header
+export default withRouter(Header) 
